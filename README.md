@@ -51,7 +51,7 @@ pip install pandas matplotlib
 **1. Clone the Repository**:
 
 ```bash
-git clone <repository_url>
+git clone https://github.com/chernisto/Unauthorized-Access-Log-Analyzer
 cd log_parser_project
 ```
 
