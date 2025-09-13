@@ -41,5 +41,7 @@ jobs:
       - name: Build Docker image
         run: docker build -t log_parser:latest .
       - name: Push Docker image
-        run: docker push ${{ secrets.DOCKER_USERNAME }} log_parser:latest && echo "Job done!!"
+        run: |
+          docker tag log_parser:latest ${{ secrets.DOCKER_USERNAME }}/log_parser:latest
+          docker push ${{ secrets.DOCKER_USERNAME }} log_parser:latest && echo "Job done!!"
     
