@@ -43,6 +43,6 @@ jobs:
       - name: Push Docker image
         run: |
           docker tag log-parser:latest ${{ secrets.DOCKER_USERNAME }}/log-parser:latest
-          docker push ${{ secrets.DOCKER_USERNAME }} log-parser:latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/log-parser:latest
           echo "Job done!!"
     
